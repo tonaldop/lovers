@@ -8,6 +8,9 @@
 
 html, body {
     height: 100%;
+
+    font-size: 1.6em;
+    font-family: 'Caveat', cursive;
 }
 
 body {
@@ -16,14 +19,14 @@ body {
 }
 
 h1 {
-    font-family: 'Caveat', cursive;
-    font-size: 4rem;
+    /*font-family: 'Caveat', cursive;*/
+    /*font-size: 1.8rem;*/
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.4rem;
-    text-align: justify;
+p, span {
+    /*font-family: 'Roboto', sans-serif;*/
+    font-size: .7em;
+    /*text-align: justify;*/
     text-indent: 8%;
 }
 
