@@ -29,13 +29,16 @@ p {
 
 .container {    
     padding: 10px;
-
     background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+
+    /*width: 375px;
+    height: 812px;
+    */
 }
 
 .content {    
-    width: 400px;
-    height: 600px;
+    width: 378px;
+    height: 540px;
     
     margin-left: auto;
     margin-right: auto;
