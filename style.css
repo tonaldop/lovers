@@ -4,13 +4,40 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Caveat', cursive;
+
+    --font-color: rgb(48, 48, 48);
+    --color-primary: #ff99cc;
+    --color-secondary: #33ccff;    
+    font-size: 1.1em;
 }
 
-html, body {
-    height: 100%;
+h1 img {
+    width: 50px;
+    margin: 0;
+    padding: 0;
+}
 
-    font-size: 1.6em;
-    font-family: 'Caveat', cursive;
+h1 {
+    font-size: 3em;
+    font-weight: 200;
+
+    margin: 0;
+    padding: 0;
+
+    /* Definir um degradê como fundo */
+    background-image: linear-gradient(to left, rgb(253, 21, 234), rgb(15, 132, 216), rgb(255, 254, 254));
+    
+    /* Apagar do fundo tudo que não estiver imediatamente atrás de texto */
+    background-clip: text;
+    -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+    /* Apagar o texto, deixando apenas o fundo atrás dele */
+    -webkit-text-fill-color: transparent;
+
+    /* Cor que contraste com o degradê, caso o navegador não suporte */
+    color: black;  
 }
 
 body {
@@ -18,76 +45,65 @@ body {
     place-items: center; /* Deixa os itens no centro */    
 }
 
-h1 {
-    /*font-family: 'Caveat', cursive;*/
-    /*font-size: 1.8rem;*/
-}
-
 p, span {
-    /*font-family: 'Roboto', sans-serif;*/
-    font-size: .7em;
-    /*text-align: justify;*/
     text-indent: 8%;
 }
 
 .container {    
-    padding: 10px;
-    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    padding: 0px 10px 0px 10px;
+    background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
 
-    /*width: 375px;
-    height: 812px;
-    */
-}
-
-.content {    
-    width: 378px;
-    height: 540px;
-    
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: var(--grey);
-
-    /*border: 1px solid white;*/
+    width: 380px;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;    
+    grid-template-rows: 80vh 10vh 10vh;
+}
+
+.content {
+    text-align: center;
+    color: var(--font-color);
 }
 
 .navegation {
-    display: grid;
+    display: grid;    
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     
-    margin-top: 60px;
+    align-items: center;
 }
 
 .navegation a {
-    color: var(--grey);
-    text-decoration: none; /* remove o sublinhado do link */      
-    width: 24px;
-    /*height: 20px;*/
-
-    justify-self: left;
-    padding: 4px;
+    width: 24px;    
+    text-decoration: none; /* remove o sublinhado do link */
 }
 
-.navegation .arrow-right {
-    justify-self: right;
+.navegation a:first-child {
+    justify-self: start;
 }
+
+.navegation a:last-child {
+    justify-self: end;
+}
+
+.socialLinks {
+    align-self: end;
+}
+
+.navegation a:hover {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+  }
 
 ul {
-    margin-top: 4rem;
     list-style: none;
-    padding: 0;
-
     display: flex;
-    gap: .5rem;
 
     justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
 }
 
-.left:hover, .right:hover {
-    background-color: rgb(220, 171, 217);
-    transition: 2ms;
-    border-radius: 4px;
+.clear {
+    visibility: hidden;    
 }
+
