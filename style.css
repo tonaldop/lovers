@@ -13,15 +13,12 @@
     font-size: 1.1em;
 }
 
-main {    
+/*main {    
     max-height: 800px;
     box-sizing: border-box;    
-}
-
+}*/
 h1 img {
     width: 50px;
-    margin: 0;
-    padding: 0;
 }
 
 h1 {
